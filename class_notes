@@ -1,0 +1,15 @@
+0. intro/env
+1. powershell scripting modules
+2. IR overview
+3. Monitor integritity: files, folders, registry, users
+4. WMI (windows management instrumentation)
+5. Monitoring network connections
+
+
+get-help ( take the updates )
+
+Get-WinEvent -FilterHashTable @{ logname=“application”; id=“1000” }
+
+Get-Process | Where-Object WorkingSet -gt 40MB
+
+
