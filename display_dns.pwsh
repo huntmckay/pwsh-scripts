@@ -1,0 +1,4 @@
+Get-NetTCPConnection -State Established | select-object -property localaddress, localport, @{name='remoteHostname';expression={(Resolve-dnsname $_.RemoteAddress).NameHost}},
+remoteaddress, RemotePort, State @{name='Process'};
+expression={(get-process id
+

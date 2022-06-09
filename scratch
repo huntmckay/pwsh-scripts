@@ -1,0 +1,5 @@
+##remote creding
+$credential = Get-Credential
+Invoke-Command $addr -ScriptBlock {
+(Get-WMIObject win32_operatingsystem).caption
+} -Credential $credential

@@ -1,0 +1,1 @@
+Get-WmiObject Win32_Server | Where-Object -Property PRocessId -In (Get-NetTCPConnection).OwningProcess } Where-Object -Property State -eq Running | Format-Table ProcessId, Name, Caption, StartMode, State, Status, PathName

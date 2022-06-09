@@ -1,0 +1,15 @@
+finish out tooling from https://www.giac.org/paper/gsec/23549/hunting-gathering-powershell/121279
+
+and look at gaps in baselining
+
+generate all json,csv,xml,html, whatever export files
+
+Generate md5 and sha256 hashes
+
+find tooling for reverting to baseline
+
+hand some of these tasks to allen or conery
+
+look at creating tabs on ticking system
+
+look at uploading baseline files to 

@@ -12,4 +12,31 @@ Get-WinEvent -FilterHashTable @{ logname=“application”; id=“1000” }
 
 Get-Process | Where-Object WorkingSet -gt 40MB
 
+about_comparison_operators
 
+
+
+
+cheat for making psremoting work betterer
+whoami (do not need domain admin to psremote)
+
+# set password
+$creds = Get-Credential
+hostname\$user
+domain\$user
+
+manage ps sessions
+enter-PSSession -computername $computername -Credential $creds
+
+enable-PSRemoting -skipnetworkprofilecheck
+
+## dangerous psremoting in mixed domain env
+set-item wsman:\localhost\client\Trustedhosts -value * -Force
+
+$creds = get-credential
+New-pssesion -cn <cn> -credential (import-clixml .\creds.xml)
+
+invoke-command -session (get-pssession |select -first 1) -scriptblock {hostname}
+
+
+get-pssession id alway counts up
