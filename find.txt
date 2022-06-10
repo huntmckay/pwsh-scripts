@@ -1,19 +1,6 @@
-
 01. Machine and Operating system information.
-machine_os_info.ps1
-
 02. User accounts and current login information.
-user_accounts.ps1
-current_login_DC.ps1
-current_login_local.ps1
-login_attempts_events.ps1
-
 03. Network configuration and connectivity information.
-network_ints.ps1
-dns.ps1
-connected_hosts.ps1
-netshares.ps1
-
 04. Anti-Virus application status and related logs.
 05. Startup applications.
 06. Running process related information.

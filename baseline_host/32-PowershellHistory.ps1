@@ -1,0 +1,1 @@
+$proc.commandline | sort | count
