@@ -3,3 +3,7 @@ $credential = Get-Credential
 Invoke-Command $addr -ScriptBlock {
 (Get-WMIObject win32_operatingsystem).caption
 } -Credential $credential
+
+
+#Get process from ausername
+Get-Process -Name * -IncludeUserName | Where UserName -eq "$name"

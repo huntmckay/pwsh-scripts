@@ -1,0 +1,13 @@
+$array = @()
+
+$array.Add(1)
+$array += 1
+
+$array = @()
+Measure-Command {
+	1..1000 | %{ $array += $_}
+}
+
+Measure-Command {
+	$arrayList = [System.Collections.Array]
+]

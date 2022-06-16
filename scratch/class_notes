@@ -40,3 +40,10 @@ invoke-command -session (get-pssession |select -first 1) -scriptblock {hostname}
 
 
 get-pssession id alway counts up
+o
+
+Get-WmiObject win32_process | ? ProcessName -eq powershell.exe
+
+(get-object).commandline | sort {$._ length}
+
+(Get-WmiObject win32_process).CommandLine | select-string "-enc"

@@ -1,0 +1,23 @@
+[ngcsa7file1]: PS C:\Users\administrator\Documents> Get-Process -name * -IncludeUserName |Sort-Object | where username -eq "army\ironcat"
+
+Handles      WS(K)   CPU(s)     Id UserName               ProcessName
+-------      -----   ------     -- --------               -----------
+   1225      70780     6.39    320 army\ironcat           explorer
+    441      37900    43.14   1564 army\ironcat           LockApp
+    345      24316     0.19   2368 army\ironcat           LockAppHost
+    156        292     0.56   6132 army\ironcat           mctray
+    395      32956     3.44   2688 army\ironcat           RuntimeBroker
+    665      54156     1.00   5028 army\ironcat           SearchUI
+    733      47988     0.67   4936 army\ironcat           ShellExperienceHost
+    369      19000     0.72   2436 army\ironcat           sihost
+    328      19964     0.06   3780 army\ironcat           svchost
+    293      15300     0.23   3808 army\ironcat           taskhostw
+    232       7132     2.83   6076 army\ironcat           UpdaterUI
+    109       7012     0.03   5980 army\ironcat           vm3dservice
+
+[ngcsa7file1]: PS C:\Users\administrator\Documents> query session /server:ngcsa7file1
+ SESSIONNAME       USERNAME                 ID  STATE   TYPE        DEVICE
+ services                                    0  Disc
+ console           ironcat                   2  Active
+ rdp-tcp#22        Administrator             4  Active
+ rdp-tcp                                 65536  Listen
